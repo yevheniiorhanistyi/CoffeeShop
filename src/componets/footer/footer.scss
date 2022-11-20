@@ -1,0 +1,35 @@
+.footer {
+    .navbar {
+        margin-top: 20px;
+        margin-bottom: 15px;
+
+        .container-fluid {
+            justify-content: center;
+        }
+
+        .navbar-collapse {
+            flex-grow: 0;
+        }
+
+        .nav-link {
+            color: #000;
+
+            &:hover {
+                text-shadow: 0px 1px 15px #000;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 991px) {
+    .footer {
+        .navbar {
+            display: none;
+        }
+
+        .image-coffee {
+            margin-top: 35px;
+        }
+    }
+}

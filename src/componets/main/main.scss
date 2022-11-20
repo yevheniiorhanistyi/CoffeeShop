@@ -1,0 +1,41 @@
+.main {
+    background: url('../../../public/img/backgrounds/main-bg.png') no-repeat;
+    background-size: cover;
+
+    &-title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 58px;
+        color: #fff;
+
+        margin-bottom: 20px;
+
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    }
+
+    .image-coffee {
+
+        &::before,
+        &::after {
+            background-color: #fff;
+        }
+    }
+
+    &-subtitle {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 35px;
+        color: #fff;
+
+        margin-bottom: 20px;
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-outline-light {
+        padding: 5px 45px;
+        margin-bottom: 200px;
+    }
+}
