@@ -1,0 +1,74 @@
+.coffee-page {
+    &__inner {
+
+        margin-bottom: 70px;
+
+        background: url('../../../../public/img/backgrounds/coffee-bg.jpg') no-repeat;
+        background-size: cover;
+
+        .navbar {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 80px;
+
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 58px;
+
+        color: #FFFFFF;
+    }
+
+   
+}
+
+.about-groupe {
+
+    &::after {
+        display: block;
+        width: 240px;
+        height: 1px;
+
+        margin: 60px auto;
+        
+        content: '';
+
+        background-color: #000;
+    }
+}
+
+.search {
+
+    &-label {
+        font-weight: 700;
+        margin-right: 20px;
+    }
+
+    &-input {
+        text-align: center;
+        
+        padding: 5px 15px;
+
+        background: #fff;
+
+        border: 0;
+        border-radius: 4px;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.filter-label {
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.filter-btn {
+
+    margin-right: 5px;
+
+    background-color: #fff;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 4px 0px 0px 4px;
+}
