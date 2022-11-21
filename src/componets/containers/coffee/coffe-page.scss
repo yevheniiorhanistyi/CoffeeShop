@@ -1,0 +1,40 @@
+.coffee-page {
+    &__inner {
+
+        margin-bottom: 70px;
+
+        background: url('../../../../public/img/backgrounds/coffee-bg.jpg') no-repeat;
+        background-size: cover;
+
+        .navbar {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 80px;
+
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 58px;
+
+        color: #FFFFFF;
+    }
+
+   
+}
+
+.about-groupe {
+
+    &::after {
+        display: block;
+        width: 240px;
+        height: 1px;
+
+        margin: 60px auto;
+        
+        content: '';
+
+        background-color: #000;
+    }
+}

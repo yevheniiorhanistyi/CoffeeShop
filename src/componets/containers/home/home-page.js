@@ -15,7 +15,7 @@ const HomePage = ({ data }) => {
             <Main />
             <About />
             <Recommended data={data} />
-            <Footer />
+            <Footer/>
         </Fragment>
     );
 }
