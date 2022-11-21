@@ -22,7 +22,7 @@ const CoffeePage = () => {
                 <div className="container text-center">
                         <div className="row align-items-center justify-content-center">
                             <div className="col-sm-4">
-                                <img src='./img/component-items/photo_1.png' alt='Photo'/>
+                                <img src='./img/component-items/photo_1.png' alt='coffee beans'/>
                             </div>
                             <div className="col-sm-4">
                                 <h2 className="about-title">About our beans</h2>
@@ -39,15 +39,15 @@ const CoffeePage = () => {
             </div>
             <div className="container text-center">
                     <div className="row align-items-center justify-content-center">
-                        <div className='col-sm-4 search'>
+                        <div className='col-sm-6 search'>
                                 <label className='search-label' htmlFor='search-input'>Lookiing for</label>
                                 <input className='search-input' type="text" placeholder='start typing here...' id='search-input'/>
                         </div>
-                        <div className='col-sm-4 filters-group'>
-                                <label className='search-label' htmlFor='filter-button'>Or filter</label>
-                                <button type="button" class="btn btn-light" id='filter-button'>Brazil</button>
-                                <button type="button" class="btn btn-light">Kenya</button>
-                                <button type="button" class="btn btn-light">Columbia</button>
+                        <div className='col-sm-5 filter-group'>
+                                <label className='filter-label' htmlFor='filter-button'>Or filter</label>
+                                <button type="button" class="btn btn-light filter-btn" id='filter-button'>Brazil</button>
+                                <button type="button" class="btn btn-light filter-btn">Kenya</button>
+                                <button type="button" class="btn btn-light filter-btn">Columbia</button>
                         </div>
                     </div>
                 </div> 
