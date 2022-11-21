@@ -58,8 +58,8 @@ const HomePage = ({ data }) => {
                         <div className="col">
                             <h2 className="recommended-title">Our best</h2>
                             <div className="recommended-items">
-                                {data.map((item, index) =>
-                                    item.recommended && <Card key={index} data={item} />)
+                                {data.map((item) =>
+                                    item.recommended && <Card key={item.id} data={item} />)
                                 }
                             </div>
 
