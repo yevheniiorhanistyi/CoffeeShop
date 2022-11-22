@@ -24,21 +24,6 @@
    
 }
 
-.about-groupe {
-
-    &::after {
-        display: block;
-        width: 240px;
-        height: 1px;
-
-        margin: 60px auto;
-        
-        content: '';
-
-        background-color: #000;
-    }
-}
-
 .search {
 
     &-label {

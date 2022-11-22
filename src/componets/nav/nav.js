@@ -25,7 +25,7 @@ const Nav = (props) => {
                             <Link className="nav-link" to="/coffee">Our coffee</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/">For your pleasure</Link>
+                            <Link className="nav-link" to="/goods">For your pleasure</Link>
                         </li>
                     </ul>
                 </div>
