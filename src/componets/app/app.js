@@ -3,9 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { arr as data } from "../../products";
 
 
-import HomePage from "../containers/home/home-page";
-import CoffeePage from "../containers/coffee/coffe-page";
-import GooodsPage from "../containers/goods/goods-page";
+import HomePage from "../pages/home/home-page";
+import CoffeePage from "../pages/coffee/coffe-page";
+import GooodsPage from "../pages/goods/goods-page";
 
 import './app.scss';
 

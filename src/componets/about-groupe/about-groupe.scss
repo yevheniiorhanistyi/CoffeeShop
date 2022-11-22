@@ -1,14 +1,34 @@
 .about-groupe {
 
-    &::after {
-        display: block;
-        width: 240px;
-        height: 1px;
+    padding-top: 60px;
+    padding-bottom: 80px;
 
-        margin: 60px auto;
+    p {
+        line-height: 20px;
+        max-width: 540px;
+        margin: 0 auto 25px;
+    }
+
+    // &::after {
+    //     display: block;
+    //     width: 240px;
+    //     height: 1px;
+
+    //     margin: 40px auto 0;
         
-        content: '';
+    //     content: '';
 
-        background-color: #000;
+    //     background-color: #000;
+    // }
+}
+
+.about {
+    
+
+    &-title {
+        font-weight: 400;
+        font-size: 24px;
+
+        margin-bottom: 21px;
     }
 }

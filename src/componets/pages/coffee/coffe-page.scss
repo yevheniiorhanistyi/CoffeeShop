@@ -1,8 +1,6 @@
 .coffee-page {
     &__inner {
 
-        margin-bottom: 70px;
-
         background: url('../../../../public/img/backgrounds/coffee-bg.jpg') no-repeat;
         background-size: cover;
 
@@ -22,6 +20,10 @@
     }
 
    
+}
+
+.mb-30 {
+    margin-bottom: 65px;
 }
 
 .search {
@@ -59,7 +61,6 @@
 }
 
 .wrapper {
-    margin-top: 60px;
 
     .coffee-card {
 
