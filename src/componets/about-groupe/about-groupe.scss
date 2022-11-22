@@ -1,13 +1,6 @@
 .about-groupe {
 
-    padding-top: 60px;
-    padding-bottom: 80px;
-
-    p {
-        line-height: 20px;
-        max-width: 540px;
-        margin: 0 auto 25px;
-    }
+    
 
     // &::after {
     //     display: block;
@@ -23,12 +16,19 @@
 }
 
 .about {
-    
+    padding-top: 60px;
+    padding-bottom: 80px;
 
     &-title {
         font-weight: 400;
         font-size: 24px;
 
         margin-bottom: 21px;
+    }
+
+    &-text {
+        line-height: 20px;
+        max-width: 540px;
+        margin: 0 auto 25px;
     }
 }
