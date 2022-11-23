@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { arr } from "../../products";
+import { arr } from "../../items";
 
 
 import HomePage from "../pages/home/home-page";
@@ -17,7 +17,7 @@ class App extends Component {
         this.state = {
             data: arr,
             term: '',
-            filter: 'all'
+            filter: ''
         }
     }
 
@@ -49,7 +49,7 @@ class App extends Component {
     }
 
     onFilterSelect = (filter) => {
-        this.setState({ filter });
+        filter === this.state.filter ? this.setState({ filter: '' }) : this.setState({ filter });
     }
 
     render() {

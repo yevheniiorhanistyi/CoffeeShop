@@ -11,11 +11,11 @@ const AboutGroupe = ({ title, src, p1, p2, isOpen, country, price }) => {
                 ?
                 < div className="container text-center" >
                     <div className="d-flex row align-items-center justify-content-center flex-wrap">
-                        {src && <div className="col-sm-5">
+                        {src && <div className="col-sm-4">
                             <img className="about-image" src={src} alt='coffee beans' />
                         </div>
                         }
-                        <div className={src ? 'col-sm-4' : 'col'}>
+                        <div className={src ? 'col-sm-3' : 'col'}>
                             <h2 className="about-title">{title}</h2>
                             <CoffeeBeans color="black" />
                             <p className="about-text">{p1}</p>
