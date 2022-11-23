@@ -1,4 +1,5 @@
 import { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 
 import Nav from '../../nav/nav';
 import CoffeeBeans from '../../coffee-beans/coffee-beans';
@@ -10,20 +11,6 @@ import Footer from '../../footer/footer';
 import './home-page.scss';
 
 class HomePage extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: this.props
-        }
-
-
-        // this.setState(({ data }) => {
-        //     return {
-        //         data: data.filter(item => item.recommended === true)
-        //     }
-        // })
-    }
-
 
     titleAbout = 'About Us';
 
@@ -40,9 +27,6 @@ class HomePage extends Component {
           repair day ladies now.`;
 
     render() {
-
-        const { data } = this.state;
-
         return (
             <Fragment>
                 <div className="main">
@@ -54,7 +38,7 @@ class HomePage extends Component {
                                 <CoffeeBeans color='white' />
                                 <h2 className='main-subtitle'>We makes every day full of energy and taste</h2>
                                 <h2 className='main-subtitle'>Want to try our beans?</h2>
-                                <button type="button" className="btn btn-outline-light">More</button>
+                                <Link className="btn btn-outline-light" to='/coffee'>More</Link>
                             </div>
                         </div>
                     </div>
@@ -62,19 +46,16 @@ class HomePage extends Component {
 
                 <AboutGroupe title={this.titleAbout} p1={this.p1} p2={this.p2} />
 
-                {/* <div className="recommended">
+                <div className="recommended">
                     <div className="container text-center">
                         <div className="row">
                             <div className="col">
                                 <h2 className="recommended-title">Our best</h2>
-                                <div className="recommended-items">
-                                    <CardList data={data} />
-                                </div>
-
+                                <CardList data={this.props.data} />
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
 
                 <Footer />
             </Fragment>

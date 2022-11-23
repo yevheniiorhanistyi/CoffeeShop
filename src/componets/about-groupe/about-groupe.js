@@ -3,7 +3,7 @@ import CoffeeBeans from "../coffee-beans/coffee-beans";
 import './about-groupe.scss';
 
 
-const AboutGroupe = ({ title, src, p1, p2, isOpen }) => {
+const AboutGroupe = ({ title, src, p1, p2, isOpen, country, price }) => {
 
     return (
         <div className='about'>
@@ -34,9 +34,9 @@ const AboutGroupe = ({ title, src, p1, p2, isOpen }) => {
                             <h2 className="about-title  text-center">About it</h2>
                             <CoffeeBeans color="black" />
                             <div className="text-left">
-                                <p className="about-country"><b>Country:</b>Brasil</p>
+                                <p className="about-country"><b>Country:</b>{country}</p>
                                 <p className="about-text text-description"><b>Description:</b>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                <p className="about-price"><b>Price:</b><span>16.99$</span></p>
+                                <p className="about-price"><b>Price:</b><span>{price}</span></p>
                             </div>
 
                         </div>

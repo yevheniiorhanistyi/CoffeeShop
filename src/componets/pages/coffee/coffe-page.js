@@ -12,12 +12,14 @@ class CoffeePage extends Component {
         super(props);
 
         this.state = {
-            isOpen: false
+            isOpen: false,
+            term: ''
         }
     }
 
-    titleAbout = 'About our beans';
     imgSrc = './img/component-items/photo_1.png';
+    titleAbout = 'About our beans';
+
     p1 = `Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.`;
 
     p2 = `Afraid at highly months do things on at. Situation recommend objection do intention
@@ -26,14 +28,31 @@ class CoffeePage extends Component {
           met spot shy want. Children me laughing we prospect answered followed. At it went
           is song that held help face.`;
 
-    onOpenDescription = (e) => {
-        console.log('open');
+    country = '';
+    price = '';
+
+    onOpenDescription = (id) => {
+        const { data } = this.props;
+        data.forEach(item => {
+            if (item.id === id) {
+                this.country = item.country;
+                this.price = item.price;
+                this.imgSrc = './img/component-items/photo_2.jpg';
+            }
+        })
+        this.setState({ isOpen: true })
+    }
+
+    onUpdateSearch = (e) => {
+        const term = e.target.value;
+        this.setState({ term });
+        this.props.onUpdateSearch(term);
     }
 
     render() {
 
+        const { isOpen, term } = this.state;
         const { data } = this.props;
-        const { isOpen } = this.state;
 
         return (
             <>
@@ -50,29 +69,31 @@ class CoffeePage extends Component {
                 {!isOpen ?
                     <>
                         <AboutGroupe title={this.titleAbout} src={this.imgSrc} p1={this.p1} p2={this.p2} />
-                        <div className="container text-center mb-30">
-                            <div className="row align-items-center justify-content-center">
-                                <div className='col-sm-6 search'>
-                                    <label className='search-label' htmlFor='search-input'>Lookiing for</label>
-                                    <input className='search-input' type="text" placeholder='start typing here...' id='search-input' />
-                                </div>
-                                <div className='col-sm-5 filter-group'>
-                                    <label className='filter-label' htmlFor='filter-button'>Or filter</label>
-                                    <button type="button" className="btn btn-light filter-btn" id='filter-button'>Brazil</button>
-                                    <button type="button" className="btn btn-light filter-btn">Kenya</button>
-                                    <button type="button" className="btn btn-light filter-btn">Columbia</button>
-                                </div>
-                            </div>
-                        </div>
                         <div className="container text-center">
                             <div className="row align-items-center justify-content-center">
                                 <div className="col-sm-10">
-                                    <CardList data={data}/>
+                                    <div className="justify-content-between">
+                                        <label className='search-label' htmlFor='search-input'>Lookiing for</label>
+                                        <input
+                                            className='search-input'
+                                            type="text"
+                                            placeholder='start typing here...'
+                                            id='search-input'
+                                            value={term}
+                                            onChange={this.onUpdateSearch} />
+                                    </div>
+                                    <div className='filter-group'>
+                                        <label className='filter-label' htmlFor='filter-button'>Or filter</label>
+                                        <button type="button" className="btn btn-light filter-btn" id='filter-button'>Brazil</button>
+                                        <button type="button" className="btn btn-light filter-btn">Kenya</button>
+                                        <button type="button" className="btn btn-light filter-btn">Columbia</button>
+                                    </div>
+                                    <CardList data={data} onOpenDescription={this.onOpenDescription} />
                                 </div>
                             </div>
                         </div>
                     </> :
-                    <AboutGroupe isOpen={isOpen} src={this.imgSrc} />
+                    <AboutGroupe isOpen={isOpen} src={this.imgSrc} country={this.country} price={this.price} />
                 }
 
 
