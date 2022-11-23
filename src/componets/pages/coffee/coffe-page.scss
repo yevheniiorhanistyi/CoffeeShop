@@ -19,45 +19,7 @@
         color: #FFFFFF;
     }
 
-   
-}
 
-.mb-30 {
-    margin-bottom: 65px;
-}
-
-.search {
-
-    &-label {
-        font-weight: 700;
-        margin-right: 20px;
-    }
-
-    &-input {
-        text-align: center;
-        
-        padding: 5px 15px;
-
-        background: #fff;
-
-        border: 0;
-        border-radius: 4px;
-        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
-    }
-}
-
-.filter-label {
-    font-weight: 700;
-    margin-right: 20px;
-}
-
-.filter-btn {
-
-    margin-right: 5px;
-
-    background-color: #fff;
-    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 4px 0px 0px 4px;
 }
 
 .wrapper {
@@ -70,4 +32,3 @@
         border-radius: 8px;
     }
 }
-

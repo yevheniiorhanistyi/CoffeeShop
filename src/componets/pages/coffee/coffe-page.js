@@ -2,6 +2,7 @@ import { Component } from 'react';
 
 import Nav from '../../nav/nav';
 import AboutGroupe from '../../about-groupe/about-groupe';
+import CardListFilters from '../../card-list-filters/card-list-filters';
 import CardList from '../../card-list/card-list';
 import Footer from '../../footer/footer';
 
@@ -43,16 +44,12 @@ class CoffeePage extends Component {
         this.setState({ isOpen: true })
     }
 
-    onUpdateSearch = (e) => {
-        const term = e.target.value;
-        this.setState({ term });
-        this.props.onUpdateSearch(term);
-    }
+
 
     render() {
 
-        const { isOpen, term } = this.state;
-        const { data } = this.props;
+        const { isOpen } = this.state;
+        const { data, onUpdateSearch, filter, onFilterSelect } = this.props;
 
         return (
             <>
@@ -72,22 +69,10 @@ class CoffeePage extends Component {
                         <div className="container text-center">
                             <div className="row align-items-center justify-content-center">
                                 <div className="col-sm-10">
-                                    <div className="justify-content-between">
-                                        <label className='search-label' htmlFor='search-input'>Lookiing for</label>
-                                        <input
-                                            className='search-input'
-                                            type="text"
-                                            placeholder='start typing here...'
-                                            id='search-input'
-                                            value={term}
-                                            onChange={this.onUpdateSearch} />
-                                    </div>
-                                    <div className='filter-group'>
-                                        <label className='filter-label' htmlFor='filter-button'>Or filter</label>
-                                        <button type="button" className="btn btn-light filter-btn" id='filter-button'>Brazil</button>
-                                        <button type="button" className="btn btn-light filter-btn">Kenya</button>
-                                        <button type="button" className="btn btn-light filter-btn">Columbia</button>
-                                    </div>
+                                    <CardListFilters
+                                        onUpdateSearch={onUpdateSearch}
+                                        filter={filter}
+                                        onFilterSelect={onFilterSelect} />
                                     <CardList data={data} onOpenDescription={this.onOpenDescription} />
                                 </div>
                             </div>
