@@ -1,11 +1,11 @@
 import { Component } from "react";
 
-import './card.scss';
+import './card-list-item.scss';
 
-class Card extends Component {
+class CardListItem extends Component {
 
     render() {
-        const { src, name, country, price} = this.props.data;
+        const { src, name, country, price } = this.props;
 
         return (
             <div className="coffee-card" >
@@ -22,4 +22,4 @@ class Card extends Component {
 
 }
 
-export default Card;
+export default CardListItem;

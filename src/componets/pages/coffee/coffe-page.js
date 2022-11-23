@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 import Nav from '../../nav/nav';
 import AboutGroupe from '../../about-groupe/about-groupe';
-import Card from '../../card/card';
+import CardList from '../../card-list/card-list';
 import Footer from '../../footer/footer';
 
 import './coffe-page.scss';
@@ -67,12 +67,7 @@ class CoffeePage extends Component {
                         <div className="container text-center">
                             <div className="row align-items-center justify-content-center">
                                 <div className="col-sm-10">
-                                    <div className="d-flex flex-wrap justify-content-center wrapper">
-                                        {data.map((item) =>
-                                            !item.recommended && <Card onClick={this.onOpenDescription} key={item.id} data={item} />)
-                                        }
-                                    </div>
-
+                                    <CardList data={data}/>
                                 </div>
                             </div>
                         </div>
