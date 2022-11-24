@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { arr } from "../../items";
+import { goods } from "../../goods";
 
 
 import HomePage from "../pages/home/home-page";
@@ -15,7 +15,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: arr,
+            data: goods,
             term: '',
             filter: ''
         }

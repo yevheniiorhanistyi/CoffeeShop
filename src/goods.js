@@ -1,4 +1,4 @@
-const arr = [
+const goods = [
     {
         id: 0,
         src: '/img/products/815O9ktyfUL.png',
