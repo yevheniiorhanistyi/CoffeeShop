@@ -4,9 +4,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { goods } from "../../goods";
 
 
-import HomePage from "../pages/home/home-page";
-import CoffeePage from "../pages/coffee/coffe-page";
-import GooodsPage from "../pages/goods/goods-page";
+import HomePage from "../pages/home-page/home-page";
+import CoffeePage from "../pages/coffee-page/coffe-page";
+import GooodsPage from "../pages/goods-page/goods-page";
 
 import './app.scss';
 
