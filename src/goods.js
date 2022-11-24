@@ -49,4 +49,4 @@ const goods = [
     }
 ];
 
-export { arr };
+export { goods };
