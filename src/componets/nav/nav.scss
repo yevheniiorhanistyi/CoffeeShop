@@ -22,4 +22,11 @@
         }
     }
 
+    @media (max-width: 991px) {
+        & {
+            margin-top: 25px;
+            margin-bottom: 40px;
+        }
+    }
+
 }
