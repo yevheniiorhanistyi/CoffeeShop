@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import * as bootstrap from "../../../node_modules/bootstrap/js/dist/collapse";
 
 import './nav.scss';
 
@@ -6,7 +7,7 @@ const Nav = (props) => {
     const isHeader = props.data === 'header';
     const clazz = isHeader ? "navbar navbar-dark navbar-expand-lg" : "navbar navbar-light navbar-expand-lg";
     const imgSrc = isHeader ? '/img/component-items/coffee-beans-header.png' : '/img/component-items/coffee-beans-footer.png'
-    
+
     return (
         <nav className={clazz}>
             <div className="container-fluid">
