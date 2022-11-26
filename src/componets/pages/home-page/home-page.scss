@@ -19,6 +19,8 @@
         }
     }
 
+
+
     .image-coffee {
 
         &::before,
@@ -41,6 +43,32 @@
     .btn-outline-light {
         padding: 5px 45px;
         margin-bottom: 200px;
+    }
+
+    @media (max-width: 991px) {
+        &-title {
+            font-size: 28px;
+        }
+
+        &-subtitle {
+            font-size: 18px;
+        }
+
+        .btn-outline-light {
+            margin-bottom: 60px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        &-title {
+            font-size: 24px;
+            line-height: 35px;
+        }
+
+        &-subtitle {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
     }
 }
 

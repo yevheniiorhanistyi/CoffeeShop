@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import * as bootstrap from "../../../node_modules/bootstrap/js/dist/collapse";
+import * as bootstrap from "../../../node_modules/bootstrap/js/dist/collapse"; // eslint-disable-line
 
 import './nav.scss';
 
