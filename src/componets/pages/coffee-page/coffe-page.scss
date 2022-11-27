@@ -19,6 +19,14 @@
         color: #FFFFFF;
     }
 
+    @media (max-width: 991px) {
+        &__title {
+            font-size: 30px;
+            line-height: 20px;
+            margin-bottom: 60px;
+        }
+    }
+
 
 }
 
