@@ -2,6 +2,12 @@
     padding-top: 60px;
     padding-bottom: 80px;
 
+    &-image {
+        display: block;
+        margin: 0 auto;
+        max-width: 330px;
+    }
+
     &-title {
         font-weight: 400;
         font-size: 24px;
@@ -23,5 +29,15 @@
 
     b {
         padding-right: 10px;
+    }
+
+    @media (max-width: 991px) {
+        padding: 30px 0;
+    }
+
+    @media (max-width: 575px) {
+        &-image {
+            max-width: 245px;
+        }
     }
 }
