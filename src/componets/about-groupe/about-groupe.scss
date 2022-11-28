@@ -8,10 +8,15 @@
         max-width: 330px;
     }
 
+    &-content {
+        margin: 0 auto;
+    }
+
     &-title {
         font-weight: 400;
         font-size: 24px;
 
+        margin-top: 21px;
         margin-bottom: 21px;
     }
 

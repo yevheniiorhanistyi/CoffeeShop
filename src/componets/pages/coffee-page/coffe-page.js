@@ -18,7 +18,7 @@ class CoffeePage extends Component {
         }
     }
 
-    imgSrc = './img/component-items/photo_1.png';
+    imgSrc = './img/component-items/girl.jpg';
     titleAbout = 'About our beans';
 
     p1 = `Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.`;
@@ -68,7 +68,7 @@ class CoffeePage extends Component {
                         <AboutGroupe title={this.titleAbout} src={this.imgSrc} p1={this.p1} p2={this.p2} />
                         <div className="container text-center">
                             <div className="row align-items-center justify-content-center">
-                                <div className="col-sm-10">
+                                <div className="col-sm-12 col-lg-10">
                                     <CardListFilters
                                         onUpdateSearch={onUpdateSearch}
                                         filter={filter}
