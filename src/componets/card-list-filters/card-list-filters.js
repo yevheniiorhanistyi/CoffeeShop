@@ -44,7 +44,7 @@ class CardListFilters extends Component {
         return (
             <div className="container text-center mb-30" >
                 <div className="row align-items-center justify-content-center">
-                    <div className='col-sm-6 search'>
+                    <div className='col-12 col-sm-12 col-md-6 col-lg-6 search'>
                         <div className="d-flex justify-content-center align-items-center">
                             <label className='search-label' htmlFor='search-input'>Lookiing for</label>
                             <input
@@ -57,7 +57,7 @@ class CardListFilters extends Component {
                         </div>
                     </div>
 
-                    <div className='col-sm-6 filter-group'>
+                    <div className='col-12 col-sm-12 col-md-7 col-lg-6 filter-group'>
                         <label className='filter-label' htmlFor='filter-button'>Or filter</label>
                         {buttons}
                     </div>
