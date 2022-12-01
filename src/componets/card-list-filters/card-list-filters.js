@@ -42,10 +42,10 @@ class CardListFilters extends Component {
         const { term } = this.state;
 
         return (
-            <div className="container text-center mb-30" >
+            <div className="container text-center filters" >
                 <div className="row align-items-center justify-content-center">
                     <div className='col-12 col-sm-12 col-md-6 col-lg-6 search'>
-                        <div className="d-flex justify-content-center align-items-center">
+                        <div className="d-flex justify-content-center align-items-center search-group">
                             <label className='search-label' htmlFor='search-input'>Lookiing for</label>
                             <input
                                 className='form-control search-input'
