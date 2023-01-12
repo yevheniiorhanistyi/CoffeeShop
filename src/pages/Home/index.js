@@ -1,14 +1,14 @@
 import { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
-import Nav from '../../nav/nav';
-import CoffeeBeans from '../../coffee-beans/coffee-beans';
-import AboutGroupe from '../../about-groupe/about-groupe';
-import CardList from '../../card-list/card-list';
-import Footer from '../../footer/footer';
+import Nav from '../../componets/nav';
+import CoffeeBeans from '../../componets/coffeeBeans';
+import AboutGroupe from '../../componets/aboutGroupe';
+import CardList from '../../componets/cardList';
+import Footer from '../../componets/footer';
 
 
-import './home-page.scss';
+import './home.scss';
 
 class HomePage extends Component {
 

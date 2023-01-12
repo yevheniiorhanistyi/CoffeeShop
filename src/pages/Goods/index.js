@@ -1,9 +1,9 @@
-import Nav from '../../componets/nav/nav';
-import AboutGroupe from '../../componets/aboutGroupe/about-groupe';
-import CardList from '../../componets/card-list/card-list';
-import Footer from '../../componets/footer/footer';
+import Nav from '../../componets/nav';
+import AboutGroupe from '../../componets/aboutGroupe';
+import CardList from '../../componets/cardList';
+import Footer from '../../componets/footer';
 
-import './goods-page.scss';
+import './goods.scss';
 
 const GooodsPage = ({ data }) => {
 

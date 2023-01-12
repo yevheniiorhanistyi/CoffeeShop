@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import './card-list-filters.scss';
+import './cardListFilters.scss';
 
 class CardListFilters extends Component {
     constructor(props) {

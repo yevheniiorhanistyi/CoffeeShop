@@ -1,6 +1,6 @@
-import CardListItem from '../cardListItem/card-list-item';
+import CardListItem from '../cardListItem';
 
-import './card-list.scss';
+import './cardList.scss';
 
 const CardList = ({ data, onOpenDescription}) => {
     const elements = data.map((item) => {

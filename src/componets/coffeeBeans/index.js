@@ -1,4 +1,4 @@
-import './coffe-beans.scss';
+import './coffeeBeans.scss';
 
 const CoffeeBeans = (props) => {
     const color = props.color;

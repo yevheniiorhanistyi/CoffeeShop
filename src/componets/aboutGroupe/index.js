@@ -1,6 +1,6 @@
-import CoffeeBeans from "../coffee-beans/coffee-beans";
+import CoffeeBeans from "../coffeeBeans";
 
-import './about-groupe.scss';
+import './aboutGroupe.scss';
 
 
 const AboutGroupe = ({ title, src, p1, p2, isOpen, country, price }) => {

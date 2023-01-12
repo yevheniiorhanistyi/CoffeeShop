@@ -1,12 +1,12 @@
 import { Component } from 'react';
 
-import Nav from '../../nav/nav';
-import AboutGroupe from '../../about-groupe/about-groupe';
-import CardListFilters from '../../card-list-filters/card-list-filters';
-import CardList from '../../card-list/card-list';
-import Footer from '../../footer/footer';
+import Nav from '../../componets/nav';
+import AboutGroupe from '../../componets/aboutGroupe';
+import CardListFilters from '../../componets/cardListFilters';
+import CardList from '../../componets/cardList';
+import Footer from '../../componets/footer';
 
-import './coffe-page.scss';
+import './coffee.scss';
 
 class CoffeePage extends Component {
     constructor(props) {

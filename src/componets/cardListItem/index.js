@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-import './card-list-item.scss';
+import './cardListItem.scss';
 
 class CardListItem extends Component {
 
