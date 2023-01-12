@@ -1,39 +1,32 @@
-import { Component } from "react";
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { goods } from "../../resources/goods";
-
+import { data } from "../../resources/data";
 
 import Home from "../../pages/Home";
 import Coffee from "../../pages/Coffee";
-import Gooods from "../../pages/Goods";
+import Goods from "../../pages/Goods";
 
 
-class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: goods,
-            term: '',
-            filter: ''
-        }
-    }
+const App = () =>  {
+    const [term, setTerm] = useState(''); 
+    const [filter, setFilter] = useState(''); 
 
-    searchItems = (items, term) => {
+    const searchItems = (items, term) => {
         if (term.length === 0) {
             return items;
-        }
+        };
 
         return items.filter(item => {
-            return item.name.toLowerCase().includes(term)
-        })
+            return item.name.toLowerCase().includes(term);
+        });
+    };
+
+    const onUpdateSearch = (term) => {
+        setTerm(() => term);
     }
 
-    onUpdateSearch = (term) => {
-        this.setState({ term })
-    }
-
-    filterPost = (items, filter) => {
+    const filterPost = (items, filter) => {
         switch (filter) {
             case 'Brazil':
                 return items.filter(item => item.country === 'Brazil');
@@ -46,15 +39,12 @@ class App extends Component {
         }
     }
 
-    onFilterSelect = (filter) => {
-        filter === this.state.filter ? this.setState({ filter: '' }) : this.setState({ filter });
-    }
+    const onFilterSelect = (props) => {
+        props === filter ? setFilter('') : setFilter(props);
+    };
 
-    render() {
-
-        const { data, term, filter } = this.state;
         const onlyRecommItems = data.filter(item => item.recommended === true);
-        const visibleData = this.filterPost(this.searchItems(data, term), filter);
+        const visibleData = filterPost(searchItems(data, term), filter);
 
         return (
             <BrowserRouter>
@@ -63,15 +53,13 @@ class App extends Component {
                     <Route path="/coffee" element={
                         <Coffee
                             data={visibleData}
-                            onUpdateSearch={this.onUpdateSearch}
+                            onUpdateSearch={onUpdateSearch}
                             filter={filter}
-                            onFilterSelect={this.onFilterSelect} />} />
-                    <Route path="/goods" element={<Gooods data={data} />} />
+                            onFilterSelect={onFilterSelect} />} />
+                    <Route path="/goods" element={<Goods data={data} />} />
                 </Routes>
             </BrowserRouter >
         );
     }
-
-}
 
 export default App;

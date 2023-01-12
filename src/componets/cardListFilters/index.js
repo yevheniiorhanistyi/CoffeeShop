@@ -1,23 +1,16 @@
-import { Component } from 'react';
+import { useState} from 'react';
 
 import './cardListFilters.scss';
 
-class CardListFilters extends Component {
-    constructor(props) {
-        super(props);
+const CardListFilters = ({onUpdateSearch, filter, onFilterSelect}) => {
+    const [term, setTerm] = useState(''); 
+    
 
-        this.state = {
-            term: ''
-        }
-    }
-
-    onUpdateSearch = (e) => {
+    const onChangeInput = (e) => {
         const term = e.target.value.toLowerCase();
-        this.setState({ term });
-        this.props.onUpdateSearch(term);
+        setTerm(term);
+        onUpdateSearch(term);
     }
-
-    render() {
 
         const buttonsData = [
             { name: 'Brazil', label: 'Brazil' },
@@ -26,20 +19,18 @@ class CardListFilters extends Component {
         ];
 
         const buttons = buttonsData.map(({ name, label }) => {
-            const active = this.props.filter === name;
+            const active = filter === name;
             const clazz = active ? 'active' : "";
             return (
                 <button
                     type="button"
                     className={`btn btn-light filter-btn ${clazz}`}
                     key={name}
-                    onClick={() => this.props.onFilterSelect(name)}>
+                    onClick={() => onFilterSelect(name)}>
                     {label}
                 </button>
             )
         })
-
-        const { term } = this.state;
 
         return (
             <div className="container text-center filters" >
@@ -53,7 +44,7 @@ class CardListFilters extends Component {
                                 placeholder='start typing here...'
                                 id='search-input'
                                 value={term}
-                                onChange={this.onUpdateSearch} />
+                                onChange={onChangeInput} />
                         </div>
                     </div>
 
@@ -66,7 +57,5 @@ class CardListFilters extends Component {
             </div>
         )
     }
-
-}
 
 export default CardListFilters;

@@ -1,4 +1,4 @@
-const goods = [
+const data = [
     {
         id: 0,
         src: '/img/products/815O9ktyfUL.png',
@@ -49,4 +49,4 @@ const goods = [
     }
 ];
 
-export { goods };
+export { data };
