@@ -1,4 +1,4 @@
-import CardListItem from '../card-list-item/card-list-item';
+import CardListItem from '../CardListItem/card-list-item';
 
 import './card-list.scss';
 

@@ -1,7 +1,7 @@
-import Nav from '../../nav/nav';
-import AboutGroupe from '../../about-groupe/about-groupe';
-import CardList from '../../card-list/card-list';
-import Footer from '../../footer/footer';
+import Nav from '../../componets/nav/nav';
+import AboutGroupe from '../../componets/AboutGroupe/about-groupe';
+import CardList from '../../componets/card-list/card-list';
+import Footer from '../../componets/footer/footer';
 
 import './goods-page.scss';
 
