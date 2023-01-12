@@ -1,5 +1,5 @@
 import Nav from '../../componets/nav/nav';
-import AboutGroupe from '../../componets/AboutGroupe/about-groupe';
+import AboutGroupe from '../../componets/aboutGroupe/about-groupe';
 import CardList from '../../componets/card-list/card-list';
 import Footer from '../../componets/footer/footer';
 

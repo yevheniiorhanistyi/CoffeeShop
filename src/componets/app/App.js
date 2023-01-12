@@ -1,14 +1,12 @@
 import { Component } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { goods } from "./goods";
+import { goods } from "../../resources/goods";
 
 
-import HomePage from "../pages/home-page/home-page";
-import CoffeePage from "../pages/coffee-page/coffe-page";
-import GooodsPage from "../pages/goods-page/goods-page";
-
-import './app.scss';
+import Home from "../../pages/Home";
+import Coffee from "../../pages/Coffee";
+import Gooods from "../../pages/Goods";
 
 
 class App extends Component {
@@ -61,14 +59,14 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<HomePage data={onlyRecommItems} />} />
+                    <Route path="/" element={<Home data={onlyRecommItems} />} />
                     <Route path="/coffee" element={
-                        <CoffeePage
+                        <Coffee
                             data={visibleData}
                             onUpdateSearch={this.onUpdateSearch}
                             filter={filter}
                             onFilterSelect={this.onFilterSelect} />} />
-                    <Route path="/goods" element={<GooodsPage data={data} />} />
+                    <Route path="/goods" element={<Gooods data={data} />} />
                 </Routes>
             </BrowserRouter >
         );
