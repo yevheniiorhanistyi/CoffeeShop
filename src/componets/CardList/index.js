@@ -1,4 +1,4 @@
-import { CardListItem } from '../';
+import { CardListItem } from '..';
 
 import './CardList.scss';
 

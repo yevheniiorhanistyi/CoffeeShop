@@ -1,4 +1,4 @@
-import { Nav, CoffeeBeans } from '../';
+import { Nav, CoffeeBeans } from '..';
 
 import './Footer.scss';
 

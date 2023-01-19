@@ -1,4 +1,4 @@
-import { CoffeeBeans } from '../';
+import { CoffeeBeans } from '..';
 
 import './About.scss';
 
