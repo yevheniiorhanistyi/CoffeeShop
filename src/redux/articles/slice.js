@@ -4,7 +4,7 @@ import { data } from '../../resources/data';
 
 const initialState = {
     articles: data,
-    selectedArticles: [],
+    selectedArticles: data,
 };
 
 export const articlesSlice = createSlice({

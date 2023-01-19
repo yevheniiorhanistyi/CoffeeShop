@@ -1,7 +1,4 @@
-import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import { data } from "../../resources/data";
 
 import Home from "../../pages/Home";
 import Coffee from "../../pages/Coffee";
@@ -10,19 +7,19 @@ import Footer from "../footer";
 import NotFound from "../../pages/NotFound";
 
 
-const App = () =>  {
-    
-        return (
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/coffee" element={<Coffee />} />
-                    <Route path="/goods" element={<Goods />} />
-                    <Route path="*" element={<NotFound/>}/>
-                </Routes>
-                <Footer/>
-            </BrowserRouter >
-        );
-    }
+const App = () => {
+
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/coffee" element={<Coffee />} />
+                <Route path="/goods" element={<Goods />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+            <Footer />
+        </BrowserRouter >
+    );
+}
 
 export default App;

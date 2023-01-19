@@ -1,6 +1,9 @@
-import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectItems } from '../../redux/articles/selectors';
+import { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { setSelectedArticles } from '../../redux/articles/slice';
+import { selectArticles } from '../../redux/articles/selectors';
+import { selectFilter } from '../../redux/filter/selectors';
 
 import Nav from '../../componets/nav';
 import CoffeeBeans from '../../componets/coffeeBeans';
@@ -10,8 +13,10 @@ import AboutItem from '../../componets/aboutItem';
 
 import './coffee.scss';
 
-const Coffee = ({ onUpdateSearch, filter, onFilterSelect}) => {
-    const { selectedArticles } = useSelector(selectArticles);
+const Coffee = () => {
+    const dispatch = useDispatch();
+    const { searchValue, currentFilter } = useSelector(selectFilter);
+    const { articles, selectedArticles } = useSelector(selectArticles);
     const [open, setOpen] = useState(false);
     const [country, setCountry] = useState('');
     const [price, setPrice] = useState(null);
@@ -25,21 +30,52 @@ const Coffee = ({ onUpdateSearch, filter, onFilterSelect}) => {
         });
         setOpen(!open);
     }
-    
-        return (
-            <>
-                <div className='coffee-page__inner'>
-                    <div className="container text-center">
-                        <div className="row">
-                            <div className="col">
-                                <Nav data='header' />
-                                <h1 className='coffee-page__title'>Our Coffee</h1>
-                            </div>
+
+    useEffect(() => {
+
+        const searchItems = (items, term) => {
+            if (term.length === 0) {
+                return items;
+            };
+
+            return items.filter(item => {
+                return item.name.toLowerCase().includes(term);
+            });
+        };
+
+        const filterPost = (items, filter) => {
+            switch (filter) {
+                case 'Brazil':
+                    return items.filter(item => item.country === 'Brazil');
+                case 'Kenya':
+                    return items.filter(item => item.country === 'Kenya');
+                case 'Columbia':
+                    return items.filter(item => item.country === 'Columbia');
+                default:
+                    return items;
+            }
+        }
+
+        const visibleItems = filterPost(searchItems(articles, searchValue), currentFilter);
+        dispatch(setSelectedArticles(visibleItems));
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [searchValue, currentFilter]);
+
+    return (
+        <>
+            <div className='coffee-page__inner'>
+                <div className="container text-center">
+                    <div className="row">
+                        <div className="col">
+                            <Nav data='header' />
+                            <h1 className='coffee-page__title'>Our Coffee</h1>
                         </div>
                     </div>
                 </div>
-                { open
-                ? <AboutItem country={country} price={price} setOpen={setOpen}/> 
+            </div>
+            {open
+                ? <AboutItem country={country} price={price} setOpen={setOpen} />
                 : <><div className='about'>
                     <div className="container">
                         <div className="row justify-content-center">
@@ -65,19 +101,19 @@ const Coffee = ({ onUpdateSearch, filter, onFilterSelect}) => {
                         </div>
                     </div>
                 </div>
-                
-                <div className="container text-center">
+
+                    <div className="container text-center">
                         <div className="row align-items-center justify-content-center">
                             <div className="col-sm-12 col-lg-10">
                                 <CardListFilters />
-                                <CardList data={selectedArticles} onOpenDescription={onOpenDescription}/>
+                                <CardList data={selectedArticles} />
                             </div>
                         </div>
-                </div>
+                    </div>
                 </>
-                }
-            </>
-        );
+            }
+        </>
+    );
 }
 
 export default Coffee;

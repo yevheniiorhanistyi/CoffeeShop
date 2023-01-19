@@ -1,10 +1,14 @@
+import { useSelector } from 'react-redux';
+import { selectArticles } from '../../redux/articles/selectors';
+
 import Nav from '../../componets/nav';
 import CardList from '../../componets/cardList';
 import CoffeeBeans from '../../componets/coffeeBeans';
 
 import './goods.scss';
 
-const GooodsPage = ({ data }) => {
+const GooodsPage = () => {
+    const { articles } = useSelector(selectArticles);
 
     return (
         <>
@@ -48,7 +52,7 @@ const GooodsPage = ({ data }) => {
             <div className="container text-center">
                 <div className="row align-items-center justify-content-center">
                     <div className="col-sm-10">
-                        <CardList data={data} />
+                        <CardList data={articles} />
                     </div>
                 </div>
             </div>
