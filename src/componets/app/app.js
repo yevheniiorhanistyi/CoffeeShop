@@ -1,79 +1,28 @@
-import { Component } from "react";
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { goods } from "../../goods";
+import { data } from "../../resources/data";
+
+import Home from "../../pages/Home";
+import Coffee from "../../pages/Coffee";
+import Goods from "../../pages/Goods";
+import Footer from "../footer";
+import NotFound from "../../pages/NotFound";
 
 
-import HomePage from "../pages/home-page/home-page";
-import CoffeePage from "../pages/coffee-page/coffe-page";
-import GooodsPage from "../pages/goods-page/goods-page";
-
-import './app.scss';
-
-
-class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: goods,
-            term: '',
-            filter: ''
-        }
-    }
-
-    searchItems = (items, term) => {
-        if (term.length === 0) {
-            return items;
-        }
-
-        return items.filter(item => {
-            return item.name.toLowerCase().includes(term)
-        })
-    }
-
-    onUpdateSearch = (term) => {
-        this.setState({ term })
-    }
-
-    filterPost = (items, filter) => {
-        switch (filter) {
-            case 'Brazil':
-                return items.filter(item => item.country === 'Brazil');
-            case 'Kenya':
-                return items.filter(item => item.country === 'Kenya');
-            case 'Columbia':
-                return items.filter(item => item.country === 'Columbia');
-            default:
-                return items;
-        }
-    }
-
-    onFilterSelect = (filter) => {
-        filter === this.state.filter ? this.setState({ filter: '' }) : this.setState({ filter });
-    }
-
-    render() {
-
-        const { data, term, filter } = this.state;
-        const onlyRecommItems = data.filter(item => item.recommended === true);
-        const visibleData = this.filterPost(this.searchItems(data, term), filter);
-
+const App = () =>  {
+    
         return (
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<HomePage data={onlyRecommItems} />} />
-                    <Route path="/coffee" element={
-                        <CoffeePage
-                            data={visibleData}
-                            onUpdateSearch={this.onUpdateSearch}
-                            filter={filter}
-                            onFilterSelect={this.onFilterSelect} />} />
-                    <Route path="/goods" element={<GooodsPage data={data} />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/coffee" element={<Coffee />} />
+                    <Route path="/goods" element={<Goods />} />
+                    <Route path="*" element={<NotFound/>}/>
                 </Routes>
+                <Footer/>
             </BrowserRouter >
         );
     }
-
-}
 
 export default App;
