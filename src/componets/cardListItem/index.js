@@ -1,7 +1,6 @@
+import './CardListItem.scss';
 
-import './cardListItem.scss';
-
-const CardListItem = ({ id, src, name, country, price, onOpenDescription }) => {
+export const CardListItem = ({ id, src, name, country, price, onOpenDescription }) => {
     return (
         <div className="coffee-card" >
             <img className="coffee-card__img" src={src} alt="Coffee beans" />
@@ -12,6 +11,4 @@ const CardListItem = ({ id, src, name, country, price, onOpenDescription }) => {
             </div>
         </div>
     );
-}
-
-export default CardListItem;
+};

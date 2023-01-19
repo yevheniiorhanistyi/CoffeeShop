@@ -1,15 +1,11 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-
-
 import { selectArticles } from '../../redux/articles/selectors';
 
-import Nav from '../../componets/nav';
-import CoffeeBeans from '../../componets/coffeeBeans';
-import CardList from '../../componets/cardList';
+import { Nav, CoffeeBeans, CardList } from '../../componets';
 
-import './home.scss';
+import './Home.scss';
 
 const Home = () => {
     const { articles } = useSelector(selectArticles);
@@ -21,7 +17,7 @@ const Home = () => {
                 <div className="container text-center">
                     <div className="row">
                         <div className="col">
-                            <Nav data='header' />
+                            <Nav />
                             <h1 className='main-title'>Everything You Love About Coffee</h1>
                             <CoffeeBeans color='white' />
                             <h2 className='main-subtitle'>We makes every day full of energy and taste</h2>

@@ -1,4 +1,4 @@
-import {NotFoundBlock} from '../../componets/notFoundBlock';
+import { NotFoundBlock } from '../../componets';
 
 const NotFound = () => <NotFoundBlock />;
 

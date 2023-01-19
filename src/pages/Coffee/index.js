@@ -5,13 +5,9 @@ import { setSelectedArticles } from '../../redux/articles/slice';
 import { selectArticles } from '../../redux/articles/selectors';
 import { selectFilter } from '../../redux/filter/selectors';
 
-import Nav from '../../componets/nav';
-import CoffeeBeans from '../../componets/coffeeBeans';
-import CardListFilters from '../../componets/cardListFilters';
-import CardList from '../../componets/cardList';
-import AboutItem from '../../componets/aboutItem';
+import { Nav, CoffeeBeans, CardListFilters, CardList, AboutItem } from '../../componets';
 
-import './coffee.scss';
+import './Coffee.scss';
 
 const Coffee = () => {
     const dispatch = useDispatch();
@@ -68,7 +64,7 @@ const Coffee = () => {
                 <div className="container text-center">
                     <div className="row">
                         <div className="col">
-                            <Nav data='header' />
+                            <Nav />
                             <h1 className='coffee-page__title'>Our Coffee</h1>
                         </div>
                     </div>

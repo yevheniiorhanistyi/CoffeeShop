@@ -1,16 +1,13 @@
-import Nav from '../nav';
-import CoffeeBeans from '../coffeeBeans';
+import { Nav, CoffeeBeans } from '../';
 
-import './footer.scss';
+import './Footer.scss';
 
-const Footer = () => {
+export const Footer = () => {
     return (
         <div className='footer'>
-            <Nav />
+            <Nav color="black" />
             <CoffeeBeans color='black' />
         </div>
 
     );
-}
-
-export default Footer;
+};

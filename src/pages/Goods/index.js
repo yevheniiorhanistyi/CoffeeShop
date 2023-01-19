@@ -1,13 +1,11 @@
 import { useSelector } from 'react-redux';
 import { selectArticles } from '../../redux/articles/selectors';
 
-import Nav from '../../componets/nav';
-import CardList from '../../componets/cardList';
-import CoffeeBeans from '../../componets/coffeeBeans';
+import { Nav, CardList, CoffeeBeans } from '../../componets';
 
-import './goods.scss';
+import './Goods.scss';
 
-const GooodsPage = () => {
+const Gooods = () => {
     const { articles } = useSelector(selectArticles);
 
     return (
@@ -16,7 +14,7 @@ const GooodsPage = () => {
                 <div className="container text-center">
                     <div className="row">
                         <div className="col">
-                            <Nav data='header' />
+                            <Nav />
                             <h1 className='goods-page__title'>For your pleasure</h1>
                         </div>
                     </div>
@@ -58,6 +56,6 @@ const GooodsPage = () => {
             </div>
         </>
     );
-}
+};
 
-export default GooodsPage;
+export default Gooods;

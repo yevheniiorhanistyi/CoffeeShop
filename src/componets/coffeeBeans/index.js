@@ -1,6 +1,6 @@
-import './coffeeBeans.scss';
+import './CoffeeBeans.scss';
 
-const CoffeeBeans = (props) => {
+export const CoffeeBeans = (props) => {
     const color = props.color;
     return (
         <div className="image-coffee">
@@ -16,6 +16,4 @@ const CoffeeBeans = (props) => {
             </svg>
         </div>
     );
-}
-
-export default CoffeeBeans;
+};

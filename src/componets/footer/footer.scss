@@ -11,13 +11,16 @@
             flex-grow: 0;
         }
 
-        .nav-link {
-            color: #000;
+        .nav-item {
+            .nav-link {
+                color: #000;
 
-            &:hover {
-               text-decoration: underline;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
+
     }
 
 }

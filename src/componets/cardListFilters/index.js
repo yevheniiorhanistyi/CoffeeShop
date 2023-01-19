@@ -2,9 +2,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectFilter } from '../../redux/filter/selectors';
 import { setSearchValue, setCurrentFilter } from '../../redux/filter/slice';
 
-import './cardListFilters.scss';
+import './CardListFilters.scss';
 
-const CardListFilters = () => {
+export const CardListFilters = () => {
     const disatch = useDispatch();
     const { searchValue, currentFilter } = useSelector(selectFilter);
 
@@ -60,6 +60,4 @@ const CardListFilters = () => {
             </div>
         </div>
     )
-}
-
-export default CardListFilters;
+};

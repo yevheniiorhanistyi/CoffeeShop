@@ -1,15 +1,13 @@
 import { Link } from 'react-router-dom';
 import * as bootstrap from "bootstrap/js/dist/collapse"; // eslint-disable-line
 
-import './nav.scss';
+import './Nav.scss';
 
-const Nav = (props) => {
-    const isHeader = props.data === 'header';
-    const clazz = isHeader ? "navbar navbar-dark navbar-expand-lg" : "navbar navbar-light navbar-expand-lg";
-    const imgSrc = isHeader ? '/img/component-items/coffee-beans-header.png' : '/img/component-items/coffee-beans-footer.png'
+export const Nav = (props) => {
+    const imgSrc = props.color === 'black' ? '/img/component-items/coffee-beans-footer.png' : '/img/component-items/coffee-beans-header.png';
 
     return (
-        <nav className={clazz}>
+        <nav className="navbar navbar-light navbar-expand-lg">
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/">
                     <img src={imgSrc} alt="Coffe beans" />
@@ -33,6 +31,4 @@ const Nav = (props) => {
             </div>
         </nav>
     );
-}
-
-export default Nav;
+};

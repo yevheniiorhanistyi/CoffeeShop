@@ -1,11 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "../../pages/Home";
-import Coffee from "../../pages/Coffee";
-import Goods from "../../pages/Goods";
-import Footer from "../footer";
-import NotFound from "../../pages/NotFound";
-
+import Home from "./pages/Home";
+import Coffee from "./pages/Coffee";
+import Goods from "./pages/Goods";
+import NotFound from "./pages/NotFound";
+import { Footer } from "./componets";
 
 const App = () => {
 
