@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectArticles } from '../../redux/articles/selectors';
 
-import { Nav, CoffeeBeans, CardList } from '../../componets';
+import { Nav, CoffeeBeans, CardList, Spinner } from '../../componets';
 
 import './Home.scss';
 
