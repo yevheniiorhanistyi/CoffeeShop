@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useSelector, useDispatch } from 'react-redux';
 
 import { setSelectedArticles } from '../../redux/articles/slice';
@@ -7,6 +8,9 @@ import { selectFilter } from '../../redux/filter/selectors';
 
 import { Nav, CoffeeBeans, CardListFilters, CardList, AboutItem } from '../../componets';
 
+import Image from '../../resources/images/girl.jpg';
+
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import './Coffee.scss';
 
 const Coffee = () => {
@@ -17,15 +21,15 @@ const Coffee = () => {
     const [country, setCountry] = useState('');
     const [price, setPrice] = useState(null);
 
-    const onOpenDescription = (id) => {
-        selectedArticles.forEach(item => {
-            if (item.id === Number(id)) {
-                setCountry(item.country);
-                setPrice(item.price);
-            }
-        });
-        setOpen(!open);
-    }
+    // const onOpenDescription = (id) => {
+    //     selectedArticles.forEach(item => {
+    //         if (item.id === Number(id)) {
+    //             setCountry(item.country);
+    //             setPrice(item.price);
+    //         }
+    //     });
+    //     setOpen(!open);
+    // }
 
     useEffect(() => {
 
@@ -79,7 +83,7 @@ const Coffee = () => {
                                 <div className="container text-center" >
                                     <div className="row align-items-center">
                                         <div className="col-12 col-sm-12 col-md-6 col-lg-6">
-                                            <img width={272} height={355} className="about-image" src='./img/component-items/girl.jpg' alt='coffee beans' />
+                                            <LazyLoadImage width={272} height={355} className="about-image" src={Image} alt='coffee beans' effect="blur"/>
                                         </div>
                                         <div className='col col-10 col-sm-8 col-md-6 col-lg-6 about-content'>
                                             <h2 className="about-title">About our beans</h2>

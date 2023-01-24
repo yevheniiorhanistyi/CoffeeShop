@@ -1,8 +1,11 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useSelector } from 'react-redux';
 import { selectArticles } from '../../redux/articles/selectors';
 
 import { Nav, CardList, CoffeeBeans } from '../../componets';
+import Image from '../../resources/images/cup.png';
 
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import './Goods.scss';
 
 const Gooods = () => {
@@ -28,7 +31,7 @@ const Gooods = () => {
                             <div className="container text-center" >
                                 <div className="row align-items-center">
                                     <div className="col-12 col-sm-12 col-md-6 col-lg-6">
-                                        <img width={272} height={355} className="about-image" src='./img/component-items/cup.png' alt='coffee beans' />
+                                        <LazyLoadImage width={272} height={355} className="about-image" src={Image} alt='coffee beans' effect="blur"/>
                                     </div>
                                     <div className='col col-10 col-sm-8 col-md-6 col-lg-6 about-content'>
                                         <h2 className="about-title">About our goods</h2>
