@@ -10,8 +10,8 @@ import { Nav, CoffeeBeans, CardListFilters, CardList, AboutItem } from '../../co
 
 import Image from '../../resources/images/girl.jpg';
 
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import './Coffee.scss';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Coffee = () => {
     const dispatch = useDispatch();
