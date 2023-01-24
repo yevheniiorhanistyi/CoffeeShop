@@ -28,7 +28,7 @@ const Gooods = () => {
                             <div className="container text-center" >
                                 <div className="row align-items-center">
                                     <div className="col-12 col-sm-12 col-md-6 col-lg-6">
-                                        <img className="about-image" src='./img/component-items/cup.png' alt='coffee beans' />
+                                        <img width={272} height={355} className="about-image" src='./img/component-items/cup.png' alt='coffee beans' />
                                     </div>
                                     <div className='col col-10 col-sm-8 col-md-6 col-lg-6 about-content'>
                                         <h2 className="about-title">About our goods</h2>
