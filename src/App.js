@@ -20,7 +20,7 @@ const App = () => {
           <Suspense fallback={<Spinner />}>
             <Coffee />
           </Suspense>} />
-        <Route path="/coffee/:country/:price" element={
+        <Route path="/coffee/:id" element={
           <Suspense fallback={<Spinner />}>
             <About />
           </Suspense>} />

@@ -4,7 +4,7 @@ import './CardListItem.scss';
 
 export const CardListItem = ({ id, src, name, country, price }) => {
     return (
-        <Link to={`/coffee/${country}/${price}`} rel="noopener noreferrer">
+        <Link to={`/coffee/${id}`} rel="noopener noreferrer">
             <div className="coffee-card" >
                 <img className="coffee-card__img" src={src} alt="Coffee beans" />
                 <div className="coffee-card__body">

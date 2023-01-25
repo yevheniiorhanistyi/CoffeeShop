@@ -1,4 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { selectArticles } from '../../redux/articles/selectors';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { Nav, CoffeeBeans } from '../../componets';
@@ -7,7 +9,11 @@ import img from '../../resources/images/photo_2.jpg'
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const About = () => {
-    const { country, price } = useParams();
+    const { selectedArticles } = useSelector(selectArticles);
+    const { id } = useParams();
+
+    const element = selectedArticles.find(item => item.id === Number(id));
+    const { country, price } = element;
 
     return (
         <>
