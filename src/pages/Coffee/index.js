@@ -48,8 +48,6 @@ const Coffee = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchValue, currentFilter]);
 
-    window.scrollTo(0, 0);
-
     return (
         <>
             <div className='coffee-page__inner'>
