@@ -1,4 +1,3 @@
-export * from './AboutItem';
 export * from './CardList';
 export * from './CardListFilters';
 export * from './CardListItem';

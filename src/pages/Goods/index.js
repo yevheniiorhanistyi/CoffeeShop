@@ -11,6 +11,8 @@ import './Goods.scss';
 const Gooods = () => {
     const { articles } = useSelector(selectArticles);
 
+    window.scrollTo(0, 0);
+
     return (
         <>
             <div className='goods-page__inner'>
@@ -31,7 +33,7 @@ const Gooods = () => {
                             <div className="container text-center" >
                                 <div className="row align-items-center">
                                     <div className="col-12 col-sm-12 col-md-6 col-lg-6">
-                                        <LazyLoadImage width={272} height={355} className="about-image" src={Image} alt='coffee beans' effect="blur"/>
+                                        <LazyLoadImage width={272} height={355} className="about-image" src={Image} alt='coffee beans' effect="blur" />
                                     </div>
                                     <div className='col col-10 col-sm-8 col-md-6 col-lg-6 about-content'>
                                         <h2 className="about-title">About our goods</h2>
