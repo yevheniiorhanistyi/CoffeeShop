@@ -1,7 +1,6 @@
 import './CoffeeBeans.scss';
 
-export const CoffeeBeans = (props) => {
-    const color = props.color;
+export const CoffeeBeans = ({color}: any) => {
     return (
         <div className="image-coffee">
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
