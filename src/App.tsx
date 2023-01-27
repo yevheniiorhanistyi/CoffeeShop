@@ -10,7 +10,7 @@ const About = React.lazy(() => import('./pages/About'));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
 
 
-const App = () => {
+const App: React.FC = () => {
 
   return (
     <BrowserRouter>

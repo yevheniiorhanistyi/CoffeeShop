@@ -1,13 +1,16 @@
 import { Link } from 'react-router-dom';
-import * as bootstrap from "bootstrap/js/dist/collapse"; // eslint-disable-line
 
 import BeansFooter from '../../resources/images/coffee-beans-footer.png'; 
 import BeansHeader from '../../resources/images/coffee-beans-header.png'; 
 
 import './Nav.scss';
 
-export const Nav = (props) => {
-    const imgSrc = props.color === 'black' ? BeansFooter : BeansHeader;
+type NavProps = {
+    color: string;
+}
+
+export const Nav: React.FC<NavProps> = ({color}) => {
+    const imgSrc = color === 'black' ? BeansFooter : BeansHeader;
 
     return (
         <nav className="navbar navbar-light navbar-expand-lg">

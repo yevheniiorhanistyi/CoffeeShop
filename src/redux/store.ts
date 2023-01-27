@@ -9,3 +9,5 @@ export const store = configureStore({
     filter,
   },
 });
+
+export type RootState = ReturnType<typeof store.getState>;

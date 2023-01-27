@@ -2,7 +2,15 @@ import { Link } from 'react-router-dom';
 
 import './CardListItem.scss';
 
-export const CardListItem = ({ id, src, name, country, price }) => {
+type CardListItemProps = {
+    id: number;
+    src: string;
+    name: string;
+    country: string;
+    price: string;
+}
+
+export const CardListItem: React.FC<CardListItemProps> = ({ id, src, name, country, price }) => {
     return (
         <Link to={`/coffee/${id}`} rel="noopener noreferrer">
             <div className="coffee-card" >

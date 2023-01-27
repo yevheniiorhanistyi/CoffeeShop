@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { ArticleSliceState } from './types';
 import { data } from '../../resources/data';
 
 
-const initialState = {
+const initialState: ArticleSliceState = {
     articles: data,
     selectedArticles: data,
 };

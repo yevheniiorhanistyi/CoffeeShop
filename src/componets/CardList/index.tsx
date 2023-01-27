@@ -2,7 +2,20 @@ import { CardListItem } from '..';
 
 import './CardList.scss';
 
-export const CardList = ({ data }) => {
+type Article = {
+    id: number;
+    src: string;
+    name: string;
+    country: string;
+    price: string;
+    recommended: boolean;
+}
+
+type CardListProps = {
+    data: Article[];
+}
+
+export const CardList: React.FC<CardListProps> = ({ data }) => {
 
     const elements = data.map((item) => {
         const { id, ...itemProps } = item;
