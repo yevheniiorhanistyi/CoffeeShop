@@ -4,15 +4,15 @@ import { setSearchValue, setCurrentFilter } from '../../redux/filter/slice';
 
 import './CardListFilters.scss';
 
-export const CardListFilters = () => {
+export const CardListFilters: React.FC = () => {
     const disatch = useDispatch();
     const { searchValue, currentFilter } = useSelector(selectFilter);
 
-    const onChangeInput = (e) => {
+    const onChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         disatch(setSearchValue(e.target.value));
     };
 
-    const onFilterSelect = (name) => {
+    const onFilterSelect = (name: string) => {
         disatch(setCurrentFilter(name));
     };
 

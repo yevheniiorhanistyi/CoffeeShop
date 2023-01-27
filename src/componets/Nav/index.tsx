@@ -5,7 +5,11 @@ import BeansHeader from '../../resources/images/coffee-beans-header.png';
 
 import './Nav.scss';
 
-export const Nav: React.FC = ({color}: any) => {
+type NavProps = {
+    color: string;
+}
+
+export const Nav: React.FC<NavProps> = ({color}) => {
     const imgSrc = color === 'black' ? BeansFooter : BeansHeader;
 
     return (
