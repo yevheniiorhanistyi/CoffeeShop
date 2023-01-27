@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/363.7e2218fe.chunk.js","mappings":"iIAIA,UAFiB,WAAH,OAAS,SAAC,KAAa,GAAI,C","sources":["pages/NotFound/index.js"],"sourcesContent":["import { NotFoundBlock } from '../../componets';\n\nconst NotFound = () => <NotFoundBlock />;\n\nexport default NotFound;"],"names":[],"sourceRoot":""}
