@@ -1,5 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { ArticleSliceState } from './types';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Article, ArticleSliceState } from './types';
 import { data } from '../../resources/data';
 
 
@@ -12,7 +12,7 @@ export const articlesSlice = createSlice({
     name: 'articles',
     initialState,
     reducers: {
-        setSelectedArticles(state, action) {
+        setSelectedArticles(state, action: PayloadAction<Article[]>) {
             state.selectedArticles = action.payload;
         },
     },

@@ -13,7 +13,7 @@ type ArticleValues = {
     price: string;
 }
 
-const About = () => {
+const About: React.FC = () => {
     const location = useLocation();
     const { selectedArticles } = useSelector(selectArticles);
     const { id } = useParams();

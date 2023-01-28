@@ -5,11 +5,13 @@ Practical task at the end of the module:
 ["The Complete JavaScript + React Course"](https://www.udemy.com/share/101WCC3@4_CWIYmpbQ5JBo-Ti3eKe4hT9cCUuWey0HtFpYfJPFUcQRfXsTkIVgsNPp-Ssn7Q3Q==/)
 
 ## Technology used:
+- TypeScript
 - Redux Toolkit 
 - React Router
 - React Hooks 
 - Bootstrap
-- CSS-Modules / SCSS 
+- CSS-Modules / SCSS
+- React-lazy-load-image-component 
 
 ![preview CoffeeShop](./preview.png)
 

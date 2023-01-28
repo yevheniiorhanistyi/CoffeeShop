@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useSelector, useDispatch } from 'react-redux';
 
+import { Article } from '../../redux/articles/types';
+
 import { setSelectedArticles } from '../../redux/articles/slice';
 import { selectArticles } from '../../redux/articles/selectors';
 import { selectFilter } from '../../redux/filter/selectors';
@@ -12,14 +14,15 @@ import Image from '../../resources/images/girl.jpg';
 
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
-const Coffee = () => {
+
+const Coffee: React.FC = () => {
     const dispatch = useDispatch();
     const { searchValue, currentFilter } = useSelector(selectFilter);
     const { articles, selectedArticles } = useSelector(selectArticles);
 
     useEffect(() => {
 
-        const searchItems = (items, term) => {
+        const searchItems = (items: Article[], term: string) => {
             if (term.length === 0) {
                 return items;
             };
@@ -29,7 +32,7 @@ const Coffee = () => {
             });
         };
 
-        const filterPost = (items, filter) => {
+        const filterPost = (items: Article[], filter: string) => {
             switch (filter) {
                 case 'Brazil':
                     return items.filter(item => item.country === 'Brazil');
@@ -54,7 +57,7 @@ const Coffee = () => {
                 <div className="container text-center">
                     <div className="row">
                         <div className="col">
-                            <Nav />
+                            <Nav color='white'/>
                             <h1 className='coffee-page__title'>Our Coffee</h1>
                         </div>
                     </div>
