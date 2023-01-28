@@ -8,7 +8,7 @@ import Image from '../../resources/images/cup.png';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import './Goods.scss';
 
-const Gooods = () => {
+const Gooods: React.FC = () => {
     const { articles } = useSelector(selectArticles);
 
     window.scrollTo(0, 0);
@@ -19,7 +19,7 @@ const Gooods = () => {
                 <div className="container text-center">
                     <div className="row">
                         <div className="col">
-                            <Nav />
+                            <Nav color='white'/>
                             <h1 className='goods-page__title'>For your pleasure</h1>
                         </div>
                     </div>
