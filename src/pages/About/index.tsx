@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useLocation, Navigate  } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectArticles } from '../../redux/articles/selectors';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -8,12 +8,19 @@ import { Nav, CoffeeBeans } from '../../componets';
 import img from '../../resources/images/photo_2.jpg'
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
+type ArticleValues = {
+    country: string;
+    price: string;
+}
+
 const About = () => {
+    const location = useLocation();
     const { selectedArticles } = useSelector(selectArticles);
     const { id } = useParams();
 
     const element = selectedArticles.find(item => item.id === Number(id));
-    const { country, price } = element;
+    if (!element) return <Navigate to="/" state={{ from: location }} replace />;
+    const { country, price }: ArticleValues = element;
 
     return (
         <>
@@ -21,7 +28,7 @@ const About = () => {
                 <div className="container text-center">
                     <div className="row">
                         <div className="col">
-                            <Nav />
+                            <Nav color='white'/>
                             <h1 className='coffee-page__title'>Our Coffee</h1>
                         </div>
                     </div>
